@@ -1,0 +1,247 @@
+
+.roundabout-holder {
+   list-style: none;
+}
+ .roundabout-moveable-item img{
+   cursor: pointer;
+   background-color: #ccc;
+   border: 3px solid #999;
+   max-height: 600px;
+   max-width: 400px;
+   margin: 2px;
+   padding: 2px;
+   vertical-align: center;
+}
+.roundabout-in-focus {
+   cursor: auto;
+   opacity: 1
+}
+
+body #content {
+   max-width: 700px;
+   box-shadow: none;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+html {
+   background:radial-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,.8) 100%);
+   background:-webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0,0,0,.3) 1%, rgba(0,0,0,.8) 100%);
+}
+
+.pbPrevButton, .pbNextButton {
+   display:block;
+   width:30px;
+   height: 300px;
+   position:absolute;
+   top:0;
+   overflow:hidden;
+   text-indent:-999px;
+   background-image:url(next-prev-sprite.png);
+   opacity:0.5;
+   z-index:3000;
+   outline:none !important;
+   vertical-align: center;
+}
+
+.pbNextButton {
+   right: 20px;
+   background-position: -30px 0;
+}
+
+.pbPrevButton{
+   left: 20px;
+   background-image:url(next-prev-sprite.png) 30px -0 no-repeat;
+}
+
+.pbPrevButton:hover, .pbNextButton:hover {
+   background-image:url(next-prev-sprite-hover.png);
+}
+
+.pbNextButton:hover {
+   background-position: -30px 0;
+}
+
+@-webkit-keyframes stripes1 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 56px 0;
+  }
+}
+
+@-webkit-keyframes stripes2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -56px 0;
+  }
+}
+
+#prevPage, #nextPage {
+   z-index: 10000;
+   position: fixed;
+   bottom: 15px;
+   border-radius: 3px;
+   display: block;      /* to allow for height/width and so on to be declared */
+   margin: 1em auto; 
+   color: #fff;         /* to stand out on the background img */
+   font-weight: bold;      /* as above */
+   font-size: 1.2em;      /* and again... */
+   text-align: center;     /* horizontally center the text in the defined box */
+   line-height: 40px;     /* defines the line height to allow for vertical center. */
+   border: 1px solid rgba(15,15,15,0.5);
+   background-image: -webkit-gradient(linear, 0 100%, 0 0, color-stop(0.21, rgb(134,141,126)), color-stop(0.61, rgb(161,170,164)));
+   background-image: -webkit-linear-gradient(bottom, rgb(134,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: -moz-linear-gradient(bottom, rgb(134,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: -o-linear-gradient(bottom, rgb(134,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: linear-gradient(bottom, rgb(134,141,126) 21%, rgb(161,170,164) 61%);
+}
+
+a:link, a:visited, a:active {
+   color: #666666;
+}
+
+a:hover {
+   color: #d05555;
+}
+
+#prevPage {
+   float: left;
+   left: 20px;
+}
+
+#nextPage {
+   float: right;
+   right: 20px;
+}
+
+#pbOverlay
+{
+   margin: 30px;
+}
+
+label {
+   position: absolute;   
+   overflow: auto;  
+   margin-top: 10px;  
+   margin-left: 86%;
+   z-index: 1000;
+}
+
+#switcher {
+    margin:5px;    
+    width:86px;
+    height:24px;  
+    background-color:silver;
+    position:relative;
+    overflow:hidden;
+    white-space:nowrap;            
+    display: inline-block;
+    border-radius:100px;                
+    padding:2px;
+    box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.4), 0px 3px 10px 0px rgba(255, 255, 255, 0.4);
+    font-family:sans-serif;
+    font-size:14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-size: 28px 28px;
+    
+}
+
+
+div #pagination a
+{
+   position: absolute;
+   overflow: auto;
+   top: 90%;
+   z-index: 1000;
+}
+
+#rail {
+        position:absolute;
+        top:2px;
+        left:18px;
+        -webkit-transition: all 0.3s ease-in-out;
+        cursor: pointer;
+}
+
+.hidden {
+   opacity: 0;
+}
+
+
+#state1 {
+        display: inline-block;
+        height:24px;
+        position:relative;
+        top:-7px;
+        left:-4px;        
+        padding-left: 5px; 
+        color:hsl(30,20%,90%);          
+}
+
+#state2 {
+        display: inline-block;
+        height:24px;
+        position:relative;
+        top:-7px;
+        left:13px;                
+        color:hsl(190,20%,90%);    
+
+}
+
+#slider {
+        display: inline-block;
+        height:24px;
+        width:24px;
+        position:relative;
+        border-radius:100px;  
+        background-color:#ccc;
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+#ch{
+        display:none;
+}
+
+#ch:checked + #switcher #rail{
+        left:-44px;
+}
+
+
+#ch:not(:checked) + #switcher {
+        background-color: hsl(30,20%,50%);
+}
+
+#ch:checked + #switcher {
+        background-color: hsl(190,20%,50%);
+}
+
+
+#ch:checked + #switcher:hover {
+background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%,rgba(255,255,255,0)), 
+        color-stop(25%,rgba(255,255,255,0)), 
+        color-stop(25%,rgba(255,255,255,.1)), 
+        color-stop(50%,rgba(255,255,255,.1)), 
+        color-stop(50%,rgba(255,255,255,0)), 
+        color-stop(75%,rgba(255,255,255,0)), 
+        color-stop(75%,rgba(255,255,255,.1)), 
+        color-stop(100%,rgba(255,255,255,.1)));
+-webkit-animation: stripes1 2s linear infinite;    
+}
+
+#ch:not(:checked) + #switcher:hover {
+background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%,rgba(255,255,255,0)), 
+        color-stop(25%,rgba(255,255,255,0)), 
+        color-stop(25%,rgba(255,255,255,.1)), 
+        color-stop(50%,rgba(255,255,255,.1)), 
+        color-stop(50%,rgba(255,255,255,0)), 
+        color-stop(75%,rgba(255,255,255,0)), 
+        color-stop(75%,rgba(255,255,255,.1)), 
+        color-stop(100%,rgba(255,255,255,.1)));
+-webkit-animation: stripes2 2s linear infinite;    
+}

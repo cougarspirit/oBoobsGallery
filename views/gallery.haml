@@ -1,0 +1,44 @@
+!!! 5
+%html{ html_attrs('ru') }
+  %head
+    %title Simple gallery
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    %link(rel='stylesheet' type='text/css' href='styles.css')
+    %link(rel='stylesheet' type='text/css' href='style.css')
+    %script{:type=>"text/javascript", :src=>"jquery.js"}
+    %script{:type=>"text/javascript", :src=>"jquery.roundabout.js"}
+    %script{:type=>"text/javascript", :src=>"jquery.roundabout-shapes.js"}
+    :javascript
+      $(document).ready(function() {
+         $('ul').roundabout({
+         childCount: 1,
+         shape: 'tearDrop',
+         btnNext: ".pbNextButton",
+         btnPrev: ".pbPrevButton"
+        });
+      });
+
+  %body
+    #header
+      .pbPrevButton prev
+      %label{:for=>"ch"}
+        %input{:type=>'checkbox', :id=>'ch'}
+        #switcher
+          #rail
+            #state1 3D
+            #slider
+            #state2 2D
+      .pbNextButton next
+    #content
+      .holder
+      #pbOverlay
+        %ul
+          -urls.each do |url|
+            %li.roundabout-moveable-item
+              %img{:src => url, :class => 'photo'}
+    #pagination
+      #nextPage
+        %a{:href=>"/#{id.to_i+5}"} Next page
+      = if id.to_i>1
+        #prevPage
+          %a{:href=>"/#{id.to_i-5}"} Previous page
