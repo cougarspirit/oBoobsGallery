@@ -14,3 +14,8 @@ end
 get '/' do
 	redirect '/1'
 end
+
+
+get %r{/*} do 
+  redirect '/0'
+end

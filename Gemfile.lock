@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     crack (0.3.2)
     haml (4.0.1)
