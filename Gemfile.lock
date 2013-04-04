@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bundle (0.0.1)
+      bundler
     crack (0.3.2)
     haml (4.0.1)
       tilt
@@ -22,8 +24,11 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bundle
+  bundler
   crack
   haml
   json
+  rack
   rest-client
   sinatra

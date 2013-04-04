@@ -4,7 +4,6 @@ require 'crack'
 require 'rest-client'
 require 'haml'
 
-class BoobsApp < Sinatra::Base
     get '/error' do
 	haml :error
     end
@@ -23,4 +22,3 @@ class BoobsApp < Sinatra::Base
     get '/' do
 	redirect '/0'
     end
-end
