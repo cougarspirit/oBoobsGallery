@@ -10,6 +10,7 @@ body, div, ul, li, label, img {
 .roundabout-holder {
    list-style: none;
 }
+
  .roundabout-moveable-item img{
    cursor: pointer;
    background-color: #ccc;
@@ -20,6 +21,7 @@ body, div, ul, li, label, img {
    padding: 2px;
    vertical-align: center;
 }
+
 .roundabout-in-focus {
    cursor: auto;
    opacity: 1
@@ -42,11 +44,11 @@ html {
    width:30px;
    height: 300px;
    position:absolute;
-   top:0;
+   top:15%;
    overflow:hidden;
    text-indent:-999px;
    background-image:url(next-prev-sprite.png);
-   opacity:0.5;
+   opacity:1;
    z-index:3000;
    outline:none !important;
    vertical-align: center;

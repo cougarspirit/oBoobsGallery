@@ -653,7 +653,7 @@
 					    self = $(this),
 					    data = self.data("roundabout"),
 					    //thisDuration = (!duration) ? data.duration : duration,
-					    thisDuration = 50,
+					    thisDuration = 100,
 					    thisEasingType = (easing) ? easing : data.easing || "swing";
 
 					// is this your first time?

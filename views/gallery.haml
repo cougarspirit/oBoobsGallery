@@ -20,7 +20,7 @@
 
   %body
     #header
-      .pbPrevButton prev
+      .pbPrevButton
       %label{:for=>"ch"}
         %input{:type=>'checkbox', :id=>'ch'}
         #switcher
@@ -28,7 +28,7 @@
             #state1 3D
             #slider
             #state2 2D
-      .pbNextButton next
+      .pbNextButton
     #content
       .holder
       #pbOverlay
@@ -39,6 +39,6 @@
     #pagination
       #nextPage
         %a{:href=>"/#{id.to_i+5}"} Next page
-      = if id.to_i>1
+      = if id.to_i>0
         #prevPage
           %a{:href=>"/#{id.to_i-5}"} Previous page
