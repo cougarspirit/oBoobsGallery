@@ -3,6 +3,15 @@ require 'json'
 require 'crack'
 require 'rest-client'
 require 'haml'
+require "sinatra/reloader"
+
+get '/error' do
+  haml :error
+end
+
+get %r{/([\D]+)} do 
+  redirect '/error'
+end
 
 get %r{/([\d]+)} do
 	id = params[:captures]
@@ -15,7 +24,3 @@ get '/' do
 	redirect '/1'
 end
 
-
-get %r{/*} do 
-  redirect '/0'
-end
