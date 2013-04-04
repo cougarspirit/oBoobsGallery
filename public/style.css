@@ -28,7 +28,9 @@ body, div, ul, li, label, img {
 }
 
 body #content {
-   max-width: 700px;
+   min-width: 640px;
+   max-width: 720px;
+   min-height: 480px;
    box-shadow: none;
    margin-left: 10%;
    margin-right: 10%;
