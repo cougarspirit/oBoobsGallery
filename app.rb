@@ -3,7 +3,6 @@ require 'json'
 require 'crack'
 require 'rest-client'
 require 'haml'
-require "sinatra/reloader"
 
 class BoobsApp < Sinatra::Base
     get '/error' do
