@@ -1,3 +1,11 @@
+body, div, ul, li, label, img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 
 .roundabout-holder {
    list-style: none;
@@ -89,9 +97,9 @@ html {
    margin: 1em auto; 
    color: #fff;         /* to stand out on the background img */
    font-weight: bold;      /* as above */
-   font-size: 1.2em;      /* and again... */
+   font-size: 1.6em;      /* and again... */
    text-align: center;     /* horizontally center the text in the defined box */
-   line-height: 40px;     /* defines the line height to allow for vertical center. */
+   line-height: 30px;     /* defines the line height to allow for vertical center. */
    border: 1px solid rgba(15,15,15,0.5);
    background-image: -webkit-gradient(linear, 0 100%, 0 0, color-stop(0.21, rgb(134,141,126)), color-stop(0.61, rgb(161,170,164)));
    background-image: -webkit-linear-gradient(bottom, rgb(134,141,126) 21%, rgb(161,170,164) 61%);
@@ -101,11 +109,19 @@ html {
 }
 
 a:link, a:visited, a:active {
-   color: #666666;
+   color: #000000;
 }
 
 a:hover {
-   color: #d05555;
+   color: #dd5013;
+}
+
+#prevPage:hover, #nextPage:hover {
+   background-image: -webkit-gradient(linear, 0 100%, 0 0, color-stop(0.21, rgb(250,141,126)), color-stop(0.61, rgb(161,170,164)));
+   background-image: -webkit-linear-gradient(bottom, rgb(250,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: -moz-linear-gradient(bottom, rgb(250,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: -o-linear-gradient(bottom, rgb(250,141,126) 21%, rgb(161,170,164) 61%);
+   background-image: linear-gradient(bottom, rgb(250,141,126) 21%, rgb(161,170,164) 61%);
 }
 
 #prevPage {
