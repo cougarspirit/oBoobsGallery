@@ -21,6 +21,6 @@ get %r{/([\d]+)} do
 end
 
 get '/' do
-	redirect '/1'
+	redirect '/0'
 end
 
